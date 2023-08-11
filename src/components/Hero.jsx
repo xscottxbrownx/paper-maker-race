@@ -2,10 +2,13 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import theme from "../theme";
+import useMediaQuery from "@mui/material/useMediaQuery";
 // Asset Imports
 import HeroPhoto from "../assets/Slides3.png";
 
 export default function Hero() {
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
     <Box
       sx={{
@@ -40,7 +43,7 @@ export default function Hero() {
         }}
       >
         <Typography
-          variant="h2"
+          variant={isSmallScreen ? "h4" : "h2"}
           component="h1"
           sx={{
             background: theme.palette.primary.gradient,
@@ -48,7 +51,7 @@ export default function Hero() {
             WebkitTextFillColor: "transparent",
           }}
         >
-          MUDDY ADVENTURE AWAITS
+          ADVENTURE AWAITS
           <br />
           AT PAPER MAKER 2024
         </Typography>

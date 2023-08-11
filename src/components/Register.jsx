@@ -50,8 +50,8 @@ export default function Register() {
         >
           The Paper Maker is returning to Round Lake in Camas, WA for 2024!
           <br />
-          Join us on August 10<sup>th</sup> for a race that not only is great
-          for families, but the competitive athlete as well.
+          Join us on August 10<sup>th</sup> for a race that is great for
+          families, and the competitive athlete as well.
           <br /> We will have cash prizes for the top 3 finishers of the
           competitive wave, as well as many friendly volunteers and
           photographers for the open wave.

@@ -41,17 +41,22 @@ export default function Register() {
           <br />
           AT PAPER MAKER 2024
         </Typography> */}
-        <Typography variant="h5" component="p" color="secondary" mb={8}>
-          Paper Maker returns for 2024 with our muddiest year yet!
+        <Typography
+          variant="h5"
+          component="p"
+          color="secondary"
+          mb={8}
+          lineHeight={2}
+        >
+          The Paper Maker is returning to Round Lake in Camas, WA for 2024!
           <br />
-          We&apos;re renewing our muddy vows, going back to the nitty gritty
-          basics, and shouting our love for mud from the mountain tops.
-          <br />
-          In fact, we&apos;re unleashing both the World&apos;s Largest Mud Pit
-          and a “Muddy Back Guarantee” to ensure the most epic day of muddy
-          glory.
-          <br />
-          You won&apos;t want to miss this!
+          Join us on August 10<sup>th</sup> for a race that not only is great
+          for families, but the competitive athlete as well.
+          <br /> We will have cash prizes for the top 3 finishers of the
+          competitive wave, as well as many friendly volunteers and
+          photographers for the open wave.
+          <br /> Bring your friends and support a local OCR created by those who
+          love the sport!
         </Typography>
         <Button
           variant="contained"

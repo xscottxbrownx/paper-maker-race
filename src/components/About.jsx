@@ -10,9 +10,14 @@ import Typography from "@mui/material/Typography";
 import { IconContext } from "react-icons";
 import { BiRun, BiSolidTrafficBarrier } from "react-icons/bi";
 import { FaPeopleCarry } from "react-icons/fa";
-import { GiJumpAcross, GiJumpingRope, GiMusicalNotes } from "react-icons/gi";
+import {
+  GiJumpAcross,
+  GiJumpingRope,
+  GiMusicalNotes,
+  GiSportMedal,
+} from "react-icons/gi";
 import { GrSwim } from "react-icons/gr";
-import { MdFestival, MdOutlineForest } from "react-icons/md";
+import { MdOutlineForest } from "react-icons/md";
 import { PiMountainsBold } from "react-icons/pi";
 
 // Component Imports
@@ -96,12 +101,12 @@ export default function About() {
                   WebkitTextFillColor: "transparent",
                 }}
               >
-                FESTIVAL AREA
+                FESTIVAL
               </Typography>
               <FestivalOutlinedIcon color="primary" sx={{ fontSize: 60 }} />
-              <MdFestival style={{ color: theme.palette.primary.main }} />
               <FastfoodOutlinedIcon color="primary" sx={{ fontSize: 60 }} />
               <GiMusicalNotes style={{ color: theme.palette.primary.main }} />
+              <GiSportMedal style={{ color: theme.palette.primary.main }} />
             </Stack>
           </IconContext.Provider>
         </Stack>

@@ -1,15 +1,20 @@
-// React Router Imports
-import { Link as RouterLink } from "react-router-dom";
 // Material UI Imports
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import Divider from "@mui/material/Divider";
+import FastfoodOutlinedIcon from "@mui/icons-material/FastfoodOutlined";
+import FestivalOutlinedIcon from "@mui/icons-material/FestivalOutlined";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
-// Material Image Imports
-import Image from "mui-image";
+// React Icons Imports
+import { IconContext } from "react-icons";
+import { BiRun, BiSolidTrafficBarrier } from "react-icons/bi";
+import { FaPeopleCarry } from "react-icons/fa";
+import { GiJumpAcross, GiJumpingRope, GiMusicalNotes } from "react-icons/gi";
+import { GrSwim } from "react-icons/gr";
+import { MdFestival, MdOutlineForest } from "react-icons/md";
+import { PiMountainsBold } from "react-icons/pi";
+
 // Component Imports
 import theme from "../theme";
 
@@ -41,53 +46,64 @@ export default function About() {
           direction="row"
           justifyContent="center"
           alignItems="center"
-          spacing={4}
+          spacing={12}
           mt={6}
         >
-          <Box>
-            <Image src="my-image.png" width={500} showLoading shift="left" />
-          </Box>
-          <Box>
-            <Typography
-              variant="h4"
-              component="h3"
-              sx={{
-                background: theme.palette.primary.gradient,
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }}
-            >
-              12+ EPIC OBSTACLES
-            </Typography>
-            <Typography
-              variant="h5"
-              component="p"
-              mb={4}
-              mt={2}
-              color="primary"
-            >
-              Simply put, Paper Maker is the greatest obstacle course race ever
-              concocted. With the most obstacles per mile of any race on the
-              planet, you and your friends will have more fun than kids on a
-              playground. And the best part? Anyone can participate, from first
-              time runners to seasoned athletes.
-            </Typography>
-            <Button
-              variant="contained"
-              component={RouterLink}
-              to="/Obstacles"
-              size="large"
-              startIcon={<VisibilityOutlinedIcon />}
-              className="button-grow"
-              sx={{
-                backgroundColor: "primary",
-                color: "secondary",
-                fontWeight: "bold",
-              }}
-            >
-              VIEW THE OBSTACLES
-            </Button>
-          </Box>
+          <IconContext.Provider value={{ size: "4em" }}>
+            <Stack alignItems="center" spacing={2}>
+              <Typography
+                variant="h4"
+                component="h3"
+                sx={{
+                  background: theme.palette.primary.gradient,
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
+                4+ MILES
+              </Typography>
+              <BiRun style={{ color: theme.palette.primary.main }} />
+              <MdOutlineForest style={{ color: theme.palette.primary.main }} />
+              <PiMountainsBold style={{ color: theme.palette.primary.main }} />
+              <GrSwim style={{ color: theme.palette.primary.main }} />
+            </Stack>
+            <Stack alignItems="center" spacing={2}>
+              <Typography
+                variant="h4"
+                component="h3"
+                sx={{
+                  background: theme.palette.primary.gradient,
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
+                10+ OBSTACLES
+              </Typography>
+              <BiSolidTrafficBarrier
+                style={{ color: theme.palette.primary.main }}
+              />
+              <GiJumpAcross style={{ color: theme.palette.primary.main }} />
+              <GiJumpingRope style={{ color: theme.palette.primary.main }} />
+              <FaPeopleCarry style={{ color: theme.palette.primary.main }} />
+            </Stack>
+            <Stack alignItems="center" spacing={2}>
+              <Typography
+                variant="h4"
+                component="h3"
+                sx={{
+                  background: theme.palette.primary.gradient,
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
+                FESTIVAL AREA
+              </Typography>
+              <FestivalOutlinedIcon color="primary" sx={{ fontSize: 60 }} />
+              <MdFestival style={{ color: theme.palette.primary.main }} />
+              <FastfoodOutlinedIcon color="primary" sx={{ fontSize: 60 }} />
+              <GiMusicalNotes style={{ color: theme.palette.primary.main }} />
+            </Stack>
+          </IconContext.Provider>
         </Stack>
       </Container>
     </Box>

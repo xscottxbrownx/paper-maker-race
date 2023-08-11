@@ -4,6 +4,7 @@ import Container from "@mui/material/Container";
 import Divider from "@mui/material/Divider";
 import FastfoodOutlinedIcon from "@mui/icons-material/FastfoodOutlined";
 import FestivalOutlinedIcon from "@mui/icons-material/FestivalOutlined";
+import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -38,7 +39,7 @@ export default function About() {
         alignItems: "center",
         backgroundColor: "secondary.main",
         px: "3rem",
-        py: "6rem",
+        py: "4rem",
         textAlign: "center",
       }}
     >
@@ -61,10 +62,11 @@ export default function About() {
           mt={6}
         >
           <IconContext.Provider value={{ size: isSmallScreen ? "3em" : "4em" }}>
-            <Stack alignItems="center" spacing={2}>
+            <Stack sx={{ justifyContent: "space-between" }}>
               <Typography
                 variant={isSmallScreen ? "h5" : "h4"}
                 component="h3"
+                mb={1}
                 sx={{
                   background: theme.palette.primary.gradient,
                   WebkitBackgroundClip: "text",
@@ -73,25 +75,30 @@ export default function About() {
               >
                 4+ MILES
               </Typography>
-              <Stack
-                direction={isSmallScreen ? "row" : "column"}
-                alignItems="center"
-                spacing={isSmallScreen ? 6 : 12}
-              >
-                <BiRun style={{ color: theme.palette.primary.main }} />
-                <MdOutlineForest
-                  style={{ color: theme.palette.primary.main }}
-                />
-                <PiMountainsBold
-                  style={{ color: theme.palette.primary.main }}
-                />
-                <GrSwim style={{ color: theme.palette.primary.main }} />
-              </Stack>
+              <Grid container justifyContent="center">
+                <Grid item xs={5}>
+                  <BiRun style={{ color: theme.palette.primary.main }} />
+                </Grid>
+                <Grid item xs={5}>
+                  <MdOutlineForest
+                    style={{ color: theme.palette.primary.main }}
+                  />
+                </Grid>
+                <Grid item xs={5}>
+                  <PiMountainsBold
+                    style={{ color: theme.palette.primary.main }}
+                  />
+                </Grid>
+                <Grid item xs={5}>
+                  <GrSwim style={{ color: theme.palette.primary.main }} />
+                </Grid>
+              </Grid>
             </Stack>
-            <Stack alignItems="center" spacing={2}>
+            <Stack alignItems="center">
               <Typography
                 variant={isSmallScreen ? "h5" : "h4"}
                 component="h3"
+                mb={1}
                 sx={{
                   background: theme.palette.primary.gradient,
                   WebkitBackgroundClip: "text",
@@ -100,23 +107,32 @@ export default function About() {
               >
                 10+ OBSTACLES
               </Typography>
-              <Stack
-                direction={isSmallScreen ? "row" : "column"}
-                alignItems="center"
-                spacing={isSmallScreen ? 6 : 12}
-              >
-                <BiSolidTrafficBarrier
-                  style={{ color: theme.palette.primary.main }}
-                />
-                <GiJumpAcross style={{ color: theme.palette.primary.main }} />
-                <GiJumpingRope style={{ color: theme.palette.primary.main }} />
-                <FaPeopleCarry style={{ color: theme.palette.primary.main }} />
-              </Stack>
+              <Grid container justifyContent="center">
+                <Grid item xs={5}>
+                  <BiSolidTrafficBarrier
+                    style={{ color: theme.palette.primary.main }}
+                  />
+                </Grid>
+                <Grid item xs={5}>
+                  <GiJumpAcross style={{ color: theme.palette.primary.main }} />
+                </Grid>
+                <Grid item xs={5}>
+                  <GiJumpingRope
+                    style={{ color: theme.palette.primary.main }}
+                  />
+                </Grid>
+                <Grid item xs={5}>
+                  <FaPeopleCarry
+                    style={{ color: theme.palette.primary.main }}
+                  />
+                </Grid>
+              </Grid>
             </Stack>
-            <Stack alignItems="center" spacing={2}>
+            <Stack alignItems="center">
               <Typography
                 variant={isSmallScreen ? "h5" : "h4"}
                 component="h3"
+                mb={1}
                 sx={{
                   background: theme.palette.primary.gradient,
                   WebkitBackgroundClip: "text",
@@ -125,16 +141,22 @@ export default function About() {
               >
                 FESTIVAL
               </Typography>
-              <Stack
-                direction={isSmallScreen ? "row" : "column"}
-                alignItems="center"
-                spacing={isSmallScreen ? 6 : 12}
-              >
-                <FestivalOutlinedIcon color="primary" sx={{ fontSize: 60 }} />
-                <FastfoodOutlinedIcon color="primary" sx={{ fontSize: 60 }} />
-                <GiMusicalNotes style={{ color: theme.palette.primary.main }} />
-                <GiSportMedal style={{ color: theme.palette.primary.main }} />
-              </Stack>
+              <Grid container justifyContent="center">
+                <Grid item xs={5}>
+                  <FestivalOutlinedIcon color="primary" sx={{ fontSize: 60 }} />
+                </Grid>
+                <Grid item xs={5}>
+                  <FastfoodOutlinedIcon color="primary" sx={{ fontSize: 60 }} />
+                </Grid>
+                <Grid item xs={5}>
+                  <GiMusicalNotes
+                    style={{ color: theme.palette.primary.main }}
+                  />
+                </Grid>
+                <Grid item xs={5}>
+                  <GiSportMedal style={{ color: theme.palette.primary.main }} />
+                </Grid>
+              </Grid>
             </Stack>
           </IconContext.Provider>
         </Stack>

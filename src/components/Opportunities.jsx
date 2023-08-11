@@ -28,7 +28,11 @@ export default function Opportunities() {
       }}
     >
       <Container>
-        <Typography variant="h3" component="h2" color="primary">
+        <Typography
+          variant={isSmallScreen ? "h4" : "h3"}
+          component="h2"
+          color="primary"
+        >
           OPPORTUNITIES
         </Typography>
         <Divider sx={{ borderBottomWidth: 2, mt: 1 }} />
@@ -54,7 +58,7 @@ export default function Opportunities() {
               sx={{ objectFit: "cover" }}
             />
             <Typography
-              variant="h4"
+              variant={isSmallScreen ? "h5" : "h4"}
               component="h3"
               mt={2}
               sx={{
@@ -110,7 +114,7 @@ export default function Opportunities() {
               sx={{ objectFit: "cover" }}
             />
             <Typography
-              variant="h4"
+              variant={isSmallScreen ? "h5" : "h4"}
               component="h3"
               mt={2}
               sx={{

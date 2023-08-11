@@ -43,7 +43,11 @@ export default function About() {
       }}
     >
       <Container>
-        <Typography variant="h3" component="h2" color="primary">
+        <Typography
+          variant={isSmallScreen ? "h4" : "h3"}
+          component="h2"
+          color="primary"
+        >
           WHAT IS PAPER MAKER?
         </Typography>
         <Divider
@@ -53,13 +57,13 @@ export default function About() {
           direction={isSmallScreen ? "column" : "row"}
           justifyContent="center"
           alignItems="center"
-          spacing={12}
+          spacing={isSmallScreen ? 6 : 12}
           mt={6}
         >
-          <IconContext.Provider value={{ size: "4em" }}>
+          <IconContext.Provider value={{ size: isSmallScreen ? "3em" : "4em" }}>
             <Stack alignItems="center" spacing={2}>
               <Typography
-                variant="h4"
+                variant={isSmallScreen ? "h5" : "h4"}
                 component="h3"
                 sx={{
                   background: theme.palette.primary.gradient,
@@ -69,14 +73,24 @@ export default function About() {
               >
                 4+ MILES
               </Typography>
-              <BiRun style={{ color: theme.palette.primary.main }} />
-              <MdOutlineForest style={{ color: theme.palette.primary.main }} />
-              <PiMountainsBold style={{ color: theme.palette.primary.main }} />
-              <GrSwim style={{ color: theme.palette.primary.main }} />
+              <Stack
+                direction={isSmallScreen ? "row" : "column"}
+                alignItems="center"
+                spacing={isSmallScreen ? 6 : 12}
+              >
+                <BiRun style={{ color: theme.palette.primary.main }} />
+                <MdOutlineForest
+                  style={{ color: theme.palette.primary.main }}
+                />
+                <PiMountainsBold
+                  style={{ color: theme.palette.primary.main }}
+                />
+                <GrSwim style={{ color: theme.palette.primary.main }} />
+              </Stack>
             </Stack>
             <Stack alignItems="center" spacing={2}>
               <Typography
-                variant="h4"
+                variant={isSmallScreen ? "h5" : "h4"}
                 component="h3"
                 sx={{
                   background: theme.palette.primary.gradient,
@@ -86,16 +100,22 @@ export default function About() {
               >
                 10+ OBSTACLES
               </Typography>
-              <BiSolidTrafficBarrier
-                style={{ color: theme.palette.primary.main }}
-              />
-              <GiJumpAcross style={{ color: theme.palette.primary.main }} />
-              <GiJumpingRope style={{ color: theme.palette.primary.main }} />
-              <FaPeopleCarry style={{ color: theme.palette.primary.main }} />
+              <Stack
+                direction={isSmallScreen ? "row" : "column"}
+                alignItems="center"
+                spacing={isSmallScreen ? 6 : 12}
+              >
+                <BiSolidTrafficBarrier
+                  style={{ color: theme.palette.primary.main }}
+                />
+                <GiJumpAcross style={{ color: theme.palette.primary.main }} />
+                <GiJumpingRope style={{ color: theme.palette.primary.main }} />
+                <FaPeopleCarry style={{ color: theme.palette.primary.main }} />
+              </Stack>
             </Stack>
             <Stack alignItems="center" spacing={2}>
               <Typography
-                variant="h4"
+                variant={isSmallScreen ? "h5" : "h4"}
                 component="h3"
                 sx={{
                   background: theme.palette.primary.gradient,
@@ -105,10 +125,16 @@ export default function About() {
               >
                 FESTIVAL
               </Typography>
-              <FestivalOutlinedIcon color="primary" sx={{ fontSize: 60 }} />
-              <FastfoodOutlinedIcon color="primary" sx={{ fontSize: 60 }} />
-              <GiMusicalNotes style={{ color: theme.palette.primary.main }} />
-              <GiSportMedal style={{ color: theme.palette.primary.main }} />
+              <Stack
+                direction={isSmallScreen ? "row" : "column"}
+                alignItems="center"
+                spacing={isSmallScreen ? 6 : 12}
+              >
+                <FestivalOutlinedIcon color="primary" sx={{ fontSize: 60 }} />
+                <FastfoodOutlinedIcon color="primary" sx={{ fontSize: 60 }} />
+                <GiMusicalNotes style={{ color: theme.palette.primary.main }} />
+                <GiSportMedal style={{ color: theme.palette.primary.main }} />
+              </Stack>
             </Stack>
           </IconContext.Provider>
         </Stack>

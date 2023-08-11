@@ -6,6 +6,7 @@ import FastfoodOutlinedIcon from "@mui/icons-material/FastfoodOutlined";
 import FestivalOutlinedIcon from "@mui/icons-material/FestivalOutlined";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
+import useMediaQuery from "@mui/material/useMediaQuery";
 // React Icons Imports
 import { IconContext } from "react-icons";
 import { BiRun, BiSolidTrafficBarrier } from "react-icons/bi";
@@ -19,11 +20,12 @@ import {
 import { GrSwim } from "react-icons/gr";
 import { MdOutlineForest } from "react-icons/md";
 import { PiMountainsBold } from "react-icons/pi";
-
 // Component Imports
 import theme from "../theme";
 
 export default function About() {
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
     <Box
       id="About"
@@ -48,7 +50,7 @@ export default function About() {
           sx={{ borderBottomWidth: 2, bgcolor: "secondary.main", mt: 1 }}
         />
         <Stack
-          direction="row"
+          direction={isSmallScreen ? "column" : "row"}
           justifyContent="center"
           alignItems="center"
           spacing={12}

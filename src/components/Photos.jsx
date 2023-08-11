@@ -35,7 +35,7 @@ export default function Team() {
         alignItems: "center",
         background: theme.palette.primary.gradient,
         px: "3rem",
-        py: "6rem",
+        py: "4rem",
         textAlign: "center",
       }}
     >

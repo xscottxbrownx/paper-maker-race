@@ -14,7 +14,7 @@ export default function Register() {
     <Box
       // id="Register"
       sx={{
-        minHeight: "35rem",
+        // minHeight: "35rem",
         width: "100vw",
         display: "flex",
         flexDirection: "column",
@@ -22,7 +22,7 @@ export default function Register() {
         alignItems: "center",
         backgroundColor: "primary.main",
         px: "3rem",
-        py: "6rem",
+        py: "4rem",
         textAlign: "center",
       }}
     >
@@ -42,7 +42,7 @@ export default function Register() {
           AT PAPER MAKER 2024
         </Typography> */}
         <Typography
-          variant="h5"
+          variant="h6"
           component="p"
           color="secondary"
           mb={8}

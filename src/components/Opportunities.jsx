@@ -22,7 +22,7 @@ export default function Opportunities() {
         minHeight: "35rem",
         width: "100vw",
         px: "3rem",
-        py: "6rem",
+        py: "4rem",
         textAlign: "center",
         backgroundColor: "secondary.main",
       }}

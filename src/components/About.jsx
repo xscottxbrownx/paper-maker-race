@@ -31,7 +31,6 @@ export default function About() {
     <Box
       id="About"
       sx={{
-        minHeight: "35rem",
         width: "100vw",
         display: "flex",
         flexDirection: "column",

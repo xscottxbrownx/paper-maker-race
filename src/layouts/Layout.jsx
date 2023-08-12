@@ -19,9 +19,9 @@ export default function Layout() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY >= 425) {
+      if (window.scrollY >= 425 && !showFab) {
         setShowFab(true);
-      } else {
+      } else if (window.scrollY < 425 && showFab) {
         setShowFab(false);
       }
     };
@@ -31,7 +31,7 @@ export default function Layout() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  });
 
   return (
     <>

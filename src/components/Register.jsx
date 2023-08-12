@@ -12,9 +12,8 @@ import theme from "../theme";
 export default function Register() {
   return (
     <Box
-      // id="Register"
+      id="Register"
       sx={{
-        // minHeight: "35rem",
         width: "100vw",
         display: "flex",
         flexDirection: "column",
@@ -27,20 +26,6 @@ export default function Register() {
       }}
     >
       <Container maxWidth="md">
-        {/* <Typography
-          variant="h2"
-          component="h1"
-          mb={4}
-          sx={{
-            background: theme.palette.primary.gradient,
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-          }}
-        >
-          MUDDY ADVENTURE AWAITS
-          <br />
-          AT PAPER MAKER 2024
-        </Typography> */}
         <Typography
           variant="h6"
           component="p"

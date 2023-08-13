@@ -1,7 +1,5 @@
 // Material UI Imports
 import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
-import Divider from "@mui/material/Divider";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -25,26 +23,35 @@ export default function Team() {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        background: theme.palette.primary.gradient,
+        backgroundColor: "secondary.main",
         px: "3rem",
-        py: "4rem",
+        py: isSmallScreen ? "3rem" : "4rem",
         textAlign: "center",
       }}
     >
-      <Container>
+      <Box
+        sx={{
+          width: isSmallScreen ? "100vw" : "95vw",
+          background: theme.palette.primary.gradient,
+          px: "3rem",
+          pt: "3rem",
+          pb: "4rem",
+          textAlign: "center",
+          borderRadius: "20px",
+        }}
+      >
         <Typography
           variant={isSmallScreen ? "h4" : "h3"}
           component="h2"
           color="primary"
         >
-          MEET THE TEAM
+          FOUNDERS
         </Typography>
-        <Divider sx={{ borderBottomWidth: 2, mt: 1 }} />
         <Stack
           direction={isSmallScreen ? "column" : "row"}
           justifyContent="center"
           alignItems="center"
-          spacing={4}
+          spacing={8}
           mt={6}
         >
           <TeamCard
@@ -66,7 +73,7 @@ export default function Team() {
             buttonText="Visit Proprioception"
           />
         </Stack>
-      </Container>
+      </Box>
     </Box>
   );
 }

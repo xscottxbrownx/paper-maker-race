@@ -6,10 +6,13 @@ import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import DirectionsRunOutlinedIcon from "@mui/icons-material/DirectionsRunOutlined";
 import Typography from "@mui/material/Typography";
+import useMediaQuery from "@mui/material/useMediaQuery";
 // Component Imports
 import theme from "../theme";
 
 export default function Register() {
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
     <Box
       id="Register"
@@ -19,48 +22,60 @@ export default function Register() {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "primary.main",
+        backgroundColor: "secondary.main",
         px: "3rem",
-        py: "4rem",
+        py: isSmallScreen ? "3rem" : "4rem",
         textAlign: "center",
       }}
     >
-      <Container maxWidth="md">
-        <Typography
-          variant="h6"
-          component="p"
-          color="secondary"
-          mb={8}
-          lineHeight={2}
-        >
-          The Paper Maker is returning to Round Lake in Camas, WA for 2024!
-          <br />
-          Join us on August 10<sup>th</sup> for a race that is great for
-          families, and the competitive athlete as well.
-          <br /> We will have cash prizes for the top 3 finishers of the
-          competitive wave, as well as many friendly volunteers and
-          photographers for the open wave.
-          <br /> Bring your friends and support a local OCR created by those who
-          love the sport!
-        </Typography>
-        <Button
-          variant="contained"
-          component={RouterLink}
-          to="https://fwb.pushpress.com/open/events?fbclid=IwAR1tdsvyhGv0JAXYbUWncd2GoepXo2jrMEI8ZHlESHBcGyw0Br3fqPjcfm4"
-          target="_blank"
-          rel="noopener"
-          size="large"
-          startIcon={<DirectionsRunOutlinedIcon />}
-          className="button-grow"
-          sx={{
-            background: theme.palette.primary.gradient,
-            color: "secondary",
-            fontWeight: "bold",
-          }}
-        >
-          REGISTER NOW
-        </Button>
-      </Container>
+      <Box
+        sx={{
+          width: isSmallScreen ? "100vw" : "95vw",
+          backgroundColor: "primary.main",
+          px: "3rem",
+          py: "4rem",
+          textAlign: "center",
+          borderRadius: "20px",
+        }}
+      >
+        <Container maxWidth="md">
+          <Typography
+            variant="h6"
+            component="p"
+            color="secondary"
+            mb={8}
+            lineHeight={2}
+          >
+            The Paper Maker is returning to Round Lake in Camas, WA for 2024!
+            <br />
+            Join us on August 10<sup>th</sup> for a race that is great for
+            families, and the competitive athlete as well.
+            <br /> We will have cash prizes for the top 3 finishers of the
+            competitive wave, as well as many friendly volunteers and
+            photographers for the open wave.
+            <br /> Bring your friends and support a local OCR created by those
+            who love the sport!
+          </Typography>
+          <Button
+            variant="contained"
+            component={RouterLink}
+            to="https://fwb.pushpress.com/open/events?fbclid=IwAR1tdsvyhGv0JAXYbUWncd2GoepXo2jrMEI8ZHlESHBcGyw0Br3fqPjcfm4"
+            target="_blank"
+            rel="noopener"
+            size="large"
+            startIcon={<DirectionsRunOutlinedIcon />}
+            className="button-grow"
+            sx={{
+              background: theme.palette.primary.gradient,
+              color: "secondary",
+              fontWeight: "bold",
+              borderRadius: "20px",
+            }}
+          >
+            REGISTER NOW
+          </Button>
+        </Container>
+      </Box>
     </Box>
   );
 }

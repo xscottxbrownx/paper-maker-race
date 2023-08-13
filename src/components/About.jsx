@@ -38,7 +38,7 @@ export default function About() {
         alignItems: "center",
         backgroundColor: "secondary.main",
         px: "3rem",
-        py: "4rem",
+        py: isSmallScreen ? "3rem" : "4rem",
         textAlign: "center",
       }}
     >
@@ -50,15 +50,17 @@ export default function About() {
         >
           WHAT IS PAPER MAKER?
         </Typography>
-        <Divider
-          sx={{ borderBottomWidth: 2, bgcolor: "secondary.main", mt: 1 }}
-        />
+        {!isSmallScreen && (
+          <Divider
+            sx={{ borderBottomWidth: 2, bgcolor: "secondary.main", mt: 1 }}
+          />
+        )}
         <Stack
           direction={isSmallScreen ? "column" : "row"}
           justifyContent="center"
           alignItems="center"
           spacing={isSmallScreen ? 6 : 12}
-          mt={6}
+          mt={4}
         >
           <IconContext.Provider value={{ size: isSmallScreen ? "3em" : "4em" }}>
             <Stack sx={{ justifyContent: "space-between" }}>

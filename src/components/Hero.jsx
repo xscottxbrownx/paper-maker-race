@@ -37,8 +37,8 @@ export default function Hero() {
           bottom: 0,
           left: 0,
           width: "100%",
-          px: "25px",
-          py: "10px",
+          px: "2rem",
+          py: "2rem",
           backgroundColor: "rgba(48,13,13,0.5)",
         }}
       >

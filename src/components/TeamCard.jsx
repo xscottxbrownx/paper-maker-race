@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 // React Router Imports
 import { Link as RouterLink } from "react-router-dom";
 // Material UI Imports
-import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -24,7 +23,7 @@ export default function TeamCard({
   buttonText,
 }) {
   return (
-    <Card elevation={24} sx={{ maxWidth: 345 }}>
+    <Card elevation={24} sx={{ maxWidth: 375 }}>
       <CardActionArea
         component={RouterLink}
         to={cardLink}
@@ -42,29 +41,29 @@ export default function TeamCard({
           </Typography>
         </CardContent>
       </CardActionArea>
-      <Box sx={{ display: "flex", justifyContent: "center" }}>
-        <CardActions>
-          <Button
-            component={RouterLink}
-            to={buttonLink}
-            size="small"
-            color="primary"
-            target="_blank"
-            rel="noopener"
-            underline="none"
-            className="button-grow"
-            elevation={24}
-            sx={{
-              background: theme.palette.primary.gradient,
-              color: "secondary.main",
-              mb: 2,
-              fontWeight: "bold",
-            }}
-          >
-            {buttonText}
-          </Button>
-        </CardActions>
-      </Box>
+      <CardActions sx={{ display: "flex", justifyContent: "center" }}>
+        <Button
+          component={RouterLink}
+          to={buttonLink}
+          size="small"
+          color="primary"
+          target="_blank"
+          rel="noopener"
+          underline="none"
+          className="button-grow"
+          elevation={24}
+          sx={{
+            background: theme.palette.primary.gradient,
+            color: "white",
+            mb: 2,
+            fontWeight: "bold",
+            borderRadius: "20px",
+            px: "15px",
+          }}
+        >
+          {buttonText}
+        </Button>
+      </CardActions>
     </Card>
   );
 }

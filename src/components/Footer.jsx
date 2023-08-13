@@ -24,7 +24,6 @@ export default function Footer() {
         width: "100vw",
         backgroundColor: theme.palette.secondary.main,
         textAlign: "center",
-        paddingTop: "3.5rem",
         paddingBottom: "2rem",
       }}
     >
@@ -40,7 +39,7 @@ export default function Footer() {
             sx={{
               display: "flex",
               flexDirection: "column",
-              mb: isSmallScreen ? "1rem" : null,
+              mb: isSmallScreen ? "2rem" : null,
             }}
           >
             <Typography
@@ -111,25 +110,10 @@ export default function Footer() {
                       : `#${item}`
                   }
                   style={{
+                    color: theme.palette.primary.main,
                     textDecoration: "none",
                     marginLeft:
                       item === ROUTES[0] ? null : determineNavlinkMargin,
-                    fontWeight:
-                      location.pathname === `/Home#${item}` ? "bold" : "",
-                    color:
-                      location.pathname === `/Home#${item}`
-                        ? null
-                        : theme.palette.primary.main,
-                    background:
-                      location.pathname === `/Home#${item}`
-                        ? theme.palette.primary.gradient
-                        : null,
-                    WebkitBackgroundClip:
-                      location.pathname === `/Home#${item}` ? "text" : null,
-                    WebkitTextFillColor:
-                      location.pathname === `/Home#${item}`
-                        ? "transparent"
-                        : null,
                   }}
                 >
                   {item}

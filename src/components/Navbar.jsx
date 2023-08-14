@@ -44,7 +44,7 @@ export default function DrawerAppBar({ window }) {
         height: "100vh",
       }}
     >
-      <NavLink to="/Home#top">
+      <NavLink to="/#top">
         <img src={pLogoGrey} width={200} />
       </NavLink>
       <Divider />
@@ -67,20 +67,20 @@ export default function DrawerAppBar({ window }) {
                   : `#${item}`
               }
               style={{
-                fontWeight: location.pathname === `/Home#${item}` ? "bold" : "",
+                fontWeight: location.pathname === `/#${item}` ? "bold" : "",
                 color:
-                  location.pathname === `/Home#${item}`
+                  location.pathname === `/#${item}`
                     ? null
                     : theme.palette.primary.main,
                 textDecoration: "none",
                 background:
-                  location.pathname === `/Home#${item}`
+                  location.pathname === `/#${item}`
                     ? theme.palette.primary.gradient
                     : null,
                 WebkitBackgroundClip:
-                  location.pathname === `/Home#${item}` ? "text" : null,
+                  location.pathname === `/#${item}` ? "text" : null,
                 WebkitTextFillColor:
-                  location.pathname === `/Home#${item}` ? "transparent" : null,
+                  location.pathname === `/#${item}` ? "transparent" : null,
               }}
             >
               {item}
@@ -114,23 +114,20 @@ export default function DrawerAppBar({ window }) {
                   }
                   style={{
                     color:
-                      location.pathname === `/Home#${item}`
+                      location.pathname === `/#${item}`
                         ? null
                         : theme.palette.primary.main,
                     textDecoration: "none",
                     margin: "0 10px",
-                    fontWeight:
-                      location.pathname === `/Home#${item}` ? "bold" : "",
+                    fontWeight: location.pathname === `/#${item}` ? "bold" : "",
                     background:
-                      location.pathname === `/Home#${item}`
+                      location.pathname === `/#${item}`
                         ? theme.palette.primary.gradient
                         : null,
                     WebkitBackgroundClip:
-                      location.pathname === `/Home#${item}` ? "text" : null,
+                      location.pathname === `/#${item}` ? "text" : null,
                     WebkitTextFillColor:
-                      location.pathname === `/Home#${item}`
-                        ? "transparent"
-                        : null,
+                      location.pathname === `/#${item}` ? "transparent" : null,
                   }}
                 >
                   {item}

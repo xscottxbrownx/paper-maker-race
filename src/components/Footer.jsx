@@ -30,6 +30,7 @@ export default function Footer() {
         backgroundColor: theme.palette.secondary.main,
         textAlign: "center",
         paddingBottom: "2rem",
+        paddingTop: isSmallScreen ? "3rem" : null,
       }}
     >
       <Container>

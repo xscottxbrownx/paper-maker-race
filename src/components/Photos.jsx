@@ -32,7 +32,7 @@ export default function Team() {
         alignItems: "center",
         backgroundColor: "secondary.main",
         px: "3rem",
-        py: isSmallScreen ? "3rem" : "4rem",
+        py: isSmallScreen ? null : "4rem",
         textAlign: "center",
       }}
     >

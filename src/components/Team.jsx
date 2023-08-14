@@ -25,7 +25,7 @@ export default function Team() {
         alignItems: "center",
         backgroundColor: "secondary.main",
         px: "3rem",
-        py: isSmallScreen ? "3rem" : "4rem",
+        py: isSmallScreen ? null : "4rem",
         textAlign: "center",
       }}
     >
@@ -44,6 +44,7 @@ export default function Team() {
           variant={isSmallScreen ? "h4" : "h3"}
           component="h2"
           color="primary"
+          sx={{ fontFamily: "Alegreya Sans SC, sans-serif" }}
         >
           FOUNDERS
         </Typography>

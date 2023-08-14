@@ -14,6 +14,7 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
+import useMediaQuery from "@mui/material/useMediaQuery";
 // Component Imports
 import ROUTES from "../constants/NavlinkList";
 import theme from "../theme";
@@ -22,6 +23,8 @@ import fullLogoGrey from "../assets/PaperMakerLogoGrey.png";
 import pLogoGrey from "../assets/PaperMakerLogoPGrey.png";
 
 export default function DrawerAppBar({ window }) {
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
+  // NOT WORKING
   let location = useLocation();
 
   // ====== EVERYTHING FOR DRAWER, MOBILE NAVIGATION ======
@@ -93,10 +96,10 @@ export default function DrawerAppBar({ window }) {
 
   return (
     <>
-      <AppBar component="nav" color="secondary">
+      <AppBar component="nav" color="secondary" elevation={8}>
         <Toolbar>
           <NavLink to="/Home#top">
-            <img src={fullLogoGrey} width={300} />
+            <img src={fullLogoGrey} width={isSmallScreen ? 200 : 300} />
           </NavLink>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: "none", md: "block" } }}>

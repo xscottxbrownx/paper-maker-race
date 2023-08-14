@@ -31,7 +31,6 @@ export default function Hero() {
         style={{ objectFit: "cover" }}
       />
       <Box
-        id="Register"
         sx={{
           position: "absolute",
           bottom: 0,

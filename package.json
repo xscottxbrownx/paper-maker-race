@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "http://xscottxbrownx.github.io/paper-maker-race",
+  "homepage": "https://xscottxbrownx.github.io/paper-maker-race",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

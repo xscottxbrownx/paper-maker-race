@@ -8,7 +8,7 @@ import {
 
 const SOCIALS = [
   {
-    url: "https://www.instagram.com/FitnesswithBennies/",
+    url: "https://www.instagram.com/papermakerevents/",
     icon: <BiLogoInstagramAlt />,
   },
   {

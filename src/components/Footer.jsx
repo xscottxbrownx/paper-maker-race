@@ -131,7 +131,7 @@ export default function Footer() {
 
           {/* LOGO */}
           {!isSmallScreen && (
-            <NavLink to="/Home#top">
+            <NavLink to="/#top">
               <img src={fullLogoGrey} width={300} />
             </NavLink>
           )}

@@ -98,7 +98,7 @@ export default function DrawerAppBar({ window }) {
     <>
       <AppBar component="nav" color="secondary" elevation={8}>
         <Toolbar>
-          <NavLink to="/Home#top">
+          <NavLink to="/#top">
             <img src={fullLogoGrey} width={isSmallScreen ? 200 : 300} />
           </NavLink>
           <Box sx={{ flexGrow: 1 }} />

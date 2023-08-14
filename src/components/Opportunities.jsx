@@ -68,6 +68,7 @@ export default function Opportunities() {
                   background: theme.palette.primary.gradient,
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
+                  fontFamily: "Alegreya Sans SC, sans-serif",
                 }}
               >
                 VOLUNTEER
@@ -135,6 +136,7 @@ export default function Opportunities() {
                   background: theme.palette.primary.gradient,
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
+                  fontFamily: "Alegreya Sans SC, sans-serif",
                 }}
               >
                 SPONSOR

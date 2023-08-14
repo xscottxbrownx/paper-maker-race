@@ -47,23 +47,20 @@ export default function About() {
           variant={isSmallScreen ? "h4" : "h3"}
           component="h2"
           color="primary"
+          sx={{ fontFamily: "Alegreya Sans SC, sans-serif" }}
         >
           WHAT IS PAPER MAKER?
         </Typography>
-        {!isSmallScreen && (
-          <Divider
-            sx={{ borderBottomWidth: 2, bgcolor: "secondary.main", mt: 1 }}
-          />
-        )}
-        <Stack
-          direction={isSmallScreen ? "column" : "row"}
-          justifyContent="center"
-          alignItems="center"
-          spacing={isSmallScreen ? 6 : 12}
-          mt={4}
-        >
-          <IconContext.Provider value={{ size: isSmallScreen ? "3em" : "4em" }}>
-            <Stack sx={{ justifyContent: "space-between" }}>
+        <IconContext.Provider value={{ size: isSmallScreen ? "3em" : "4em" }}>
+          <Stack
+            direction={isSmallScreen ? "column" : "row"}
+            justifyContent="center"
+            alignItems="center"
+            divider={<Divider orientation="vertical" flexItem />}
+            spacing={isSmallScreen ? 4 : 6}
+            mt={4}
+          >
+            <Stack>
               <Typography
                 variant={isSmallScreen ? "h5" : "h4"}
                 component="h3"
@@ -95,7 +92,8 @@ export default function About() {
                 </Grid>
               </Grid>
             </Stack>
-            <Stack alignItems="center">
+
+            <Stack>
               <Typography
                 variant={isSmallScreen ? "h5" : "h4"}
                 component="h3"
@@ -129,7 +127,8 @@ export default function About() {
                 </Grid>
               </Grid>
             </Stack>
-            <Stack alignItems="center">
+
+            <Stack>
               <Typography
                 variant={isSmallScreen ? "h5" : "h4"}
                 component="h3"
@@ -159,8 +158,8 @@ export default function About() {
                 </Grid>
               </Grid>
             </Stack>
-          </IconContext.Provider>
-        </Stack>
+          </Stack>
+        </IconContext.Provider>
       </Container>
     </Box>
   );

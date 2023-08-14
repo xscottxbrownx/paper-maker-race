@@ -49,6 +49,7 @@ export default function Hero() {
             background: theme.palette.primary.gradient,
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
+            fontFamily: "Alegreya Sans SC, sans-serif",
           }}
         >
           ADVENTURE AWAITS

@@ -14,9 +14,14 @@ import theme from "../theme";
 import fullLogoGrey from "../assets/PaperMakerLogoGrey.png";
 
 export default function Footer() {
+  const isTinyScreen = useMediaQuery("(max-width:450px)");
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
   const isNormalScreen = useMediaQuery(theme.breakpoints.between("md", "lg"));
-  const determineNavlinkMargin = isNormalScreen ? "0.5rem" : "1.5rem";
+  const determineNavlinkMargin = isNormalScreen
+    ? "0.5rem"
+    : isSmallScreen
+    ? "0.5rem"
+    : "1.5rem";
 
   return (
     <footer
@@ -55,7 +60,8 @@ export default function Footer() {
             <Box
               sx={{
                 display: "flex",
-                gap: isNormalScreen ? "10px" : "20px",
+                justifyContent: "center",
+                gap: "0.5rem",
               }}
             >
               <IconContext.Provider
@@ -131,37 +137,66 @@ export default function Footer() {
         </Stack>
 
         {/* LEGALS */}
-        <Stack
-          direction="row"
-          justifyContent="space-between"
-          alignItems="center"
-        >
-          <Typography variant="body2" color={theme.palette.tertiary.main}>
-            © 2023 Paper Maker Inc.
-          </Typography>
-          <Box sx={{ flexGrow: 1 }} />
-          <Typography
-            variant="body2"
-            color={theme.palette.tertiary.main}
-            sx={{ cursor: "pointer" }}
+        {!isTinyScreen && (
+          <Stack
+            direction="row"
+            justifyContent="space-between"
+            alignItems="center"
           >
-            Privacy Policy
-          </Typography>
-          <Typography
-            variant="body2"
-            color={theme.palette.tertiary.main}
-            sx={{ mx: "0.5rem" }}
+            <Typography variant="body2" color={theme.palette.tertiary.main}>
+              © 2023 Paper Maker Inc.
+            </Typography>
+            <Box sx={{ flexGrow: 1 }} />
+            <Typography
+              variant="body2"
+              color={theme.palette.tertiary.main}
+              sx={{ cursor: "pointer" }}
+            >
+              Privacy Policy
+            </Typography>
+            <Typography
+              variant="body2"
+              color={theme.palette.tertiary.main}
+              sx={{ mx: isSmallScreen ? "0.25rem" : "0.5rem" }}
+            >
+              |
+            </Typography>
+            <Typography
+              variant="body2"
+              color={theme.palette.tertiary.main}
+              sx={{ cursor: "pointer" }}
+            >
+              Terms & Conditions
+            </Typography>
+          </Stack>
+        )}
+
+        {isTinyScreen && (
+          <Stack
+            direction="column"
+            justifyContent="space-between"
+            alignItems="center"
           >
-            |
-          </Typography>
-          <Typography
-            variant="body2"
-            color={theme.palette.tertiary.main}
-            sx={{ cursor: "pointer" }}
-          >
-            Terms & Conditions
-          </Typography>
-        </Stack>
+            <Typography
+              variant="body2"
+              color={theme.palette.tertiary.main}
+              sx={{ cursor: "pointer" }}
+            >
+              Privacy Policy
+            </Typography>
+            <Typography
+              variant="body2"
+              color={theme.palette.tertiary.main}
+              mb={1}
+              sx={{ cursor: "pointer" }}
+            >
+              Terms & Conditions
+            </Typography>
+            <Typography variant="body2" color={theme.palette.tertiary.main}>
+              © 2023 Paper Maker Inc.
+            </Typography>
+          </Stack>
+        )}
       </Container>
     </footer>
   );

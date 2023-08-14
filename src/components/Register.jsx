@@ -24,7 +24,7 @@ export default function Register() {
         alignItems: "center",
         backgroundColor: "secondary.main",
         px: "3rem",
-        py: isSmallScreen ? "3rem" : "4rem",
+        py: isSmallScreen ? null : "4rem",
         textAlign: "center",
       }}
     >
@@ -35,7 +35,7 @@ export default function Register() {
           px: "3rem",
           py: "4rem",
           textAlign: "center",
-          borderRadius: "20px",
+          borderRadius: isSmallScreen ? null : "20px",
         }}
       >
         <Container maxWidth="md">

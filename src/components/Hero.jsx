@@ -12,7 +12,7 @@ export default function Hero() {
   return (
     <Box
       sx={{
-        paddingTop: "65px",
+        paddingTop: isSmallScreen ? "55px" : "65px",
         height: "100vh",
         width: "100vw",
         backgroundColor: "secondary",

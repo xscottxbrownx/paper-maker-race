@@ -32,10 +32,11 @@ export default function Opportunities() {
         <Stack
           direction={isSmallScreen ? "column" : "row"}
           justifyContent="center"
+          alignItems="center"
           divider={<Divider orientation="vertical" flexItem />}
-          spacing={isSmallScreen ? 6 : 8}
+          spacing={isSmallScreen ? 5 : 8}
         >
-          <Card elevation={24} sx={{ width: 400 }}>
+          <Card elevation={24} sx={{ width: isSmallScreen ? 300 : 400 }}>
             <CardContent
               sx={{
                 display: "flex",
@@ -102,7 +103,7 @@ export default function Opportunities() {
             </CardActions>
           </Card>
 
-          <Card elevation={24} sx={{ width: 400 }}>
+          <Card elevation={24} sx={{ width: isSmallScreen ? 300 : 400 }}>
             <CardContent
               sx={{
                 display: "flex",

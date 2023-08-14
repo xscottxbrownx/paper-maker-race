@@ -43,7 +43,7 @@ export default function Team() {
           px: "3rem",
           py: "4rem",
           textAlign: "center",
-          borderRadius: "20px",
+          borderRadius: isSmallScreen ? null : "20px",
         }}
       >
         <Container>

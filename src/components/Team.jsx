@@ -37,7 +37,7 @@ export default function Team() {
           pt: "3rem",
           pb: "4rem",
           textAlign: "center",
-          borderRadius: "20px",
+          borderRadius: isSmallScreen ? null : "20px",
         }}
       >
         <Typography
@@ -51,8 +51,9 @@ export default function Team() {
           direction={isSmallScreen ? "column" : "row"}
           justifyContent="center"
           alignItems="center"
-          spacing={8}
+          spacing={12}
           mt={6}
+          mb={4}
         >
           <TeamCard
             cardLink="https://www.facebook.com/bennie.crocker.9"

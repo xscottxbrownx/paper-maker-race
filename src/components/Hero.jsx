@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import theme from "../theme";
 import useMediaQuery from "@mui/material/useMediaQuery";
 // Asset Imports
-import HeroPhoto from "../assets/Slides3.png";
+import HeroPhoto from "../assets/Slides3.webp";
 
 export default function Hero() {
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));

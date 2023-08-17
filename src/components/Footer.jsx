@@ -11,7 +11,7 @@ import ROUTES from "../constants/NavlinkList";
 import SOCIALS from "../constants/SocialsList";
 import theme from "../theme";
 // Asset Imports
-import fullLogoGrey from "../assets/PaperMakerLogoGrey.png";
+import fullLogoGrey from "../assets/PaperMakerLogoGrey.webp";
 
 export default function Footer() {
   const isTinyScreen = useMediaQuery("(max-width:450px)");

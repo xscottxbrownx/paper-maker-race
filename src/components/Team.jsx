@@ -7,8 +7,8 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import TeamCard from "./TeamCard";
 import theme from "../theme";
 // Asset Imports
-import Bennie from "../assets/Bennie.png";
-import Ryan from "../assets/Ryan.png";
+import Bennie from "../assets/Bennie.webp";
+import Ryan from "../assets/Ryan.webp";
 
 export default function Team() {
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));

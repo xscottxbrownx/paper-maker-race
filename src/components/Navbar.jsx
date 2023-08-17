@@ -19,8 +19,8 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import ROUTES from "../constants/NavlinkList";
 import theme from "../theme";
 // Asset Imports
-import fullLogoGrey from "../assets/PaperMakerLogoGrey.png";
-import pLogoGrey from "../assets/PaperMakerLogoPGrey.png";
+import fullLogoGrey from "../assets/PaperMakerLogoGrey.webp";
+import pLogoGrey from "../assets/PaperMakerLogoPGrey.webp";
 
 export default function DrawerAppBar({ window }) {
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
